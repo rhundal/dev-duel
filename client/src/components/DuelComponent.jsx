@@ -1,4 +1,5 @@
 import '../../src/App.css';
+import { Link } from 'react-router-dom';
 
 
 const DuelComponent = () => {
@@ -21,7 +22,7 @@ const DuelComponent = () => {
                             </tr>
                             <tr>
                                 <td>
-                                    <button id='styleBtnInspect'>Duel</button>
+                                    <button id='styleBtnInspect'><Link className='styleLink' to='/duelresult'> Duel </Link></button>
                                 </td>
                             </tr>
                         </tbody>

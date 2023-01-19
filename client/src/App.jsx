@@ -9,6 +9,8 @@ import Home from './pages/HomePage';
 import { Route, Switch } from "react-router-dom";
 import Inspect from "./pages/InspectPage";
 import Duel from "./pages/DuelPage";
+import InspectRes from "./pages/InspectResults";
+import DuelRes from "./pages/DuelResults";
 
 function App() {
 
@@ -23,6 +25,8 @@ function App() {
       <GlobalStyles />
       <Navbar />
       <Switch>
+        <Route exact path='/duelresult' component={DuelRes} />
+        <Route exact path='/inspectresult' component={InspectRes} />
         <Route path='/inspect' component={Inspect} />
         <Route path='/duel' component={Duel} />
         <Route path='/' component={Home} />

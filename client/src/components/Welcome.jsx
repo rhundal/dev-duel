@@ -1,6 +1,6 @@
 //import { Container, Row, Col, Button } from 'react-bootstrap';
 import '../../src/App.css';
-
+import { Link } from 'react-router-dom';
 
 const Welcome = () => {
 
@@ -11,19 +11,23 @@ const Welcome = () => {
                     <div className='adjustMarginTitle'> Welcome to Dev-Duel</div>
                 </div>
                 <div className='welcomeButtonsDiv'>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <button className='buttonInspect'>Inspect</button>
-                                </td>
-                                <td> <p className='middleBar'> | </p></td>
-                                <td>
-                                    <button className='buttonDuel'>Duel</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <nav>
+
+                        <table>
+                            <tbody>
+                                <tr>
+
+                                    <td>
+                                        <button className='buttonInspect'> <Link className='styleLink' to='/inspect'> Inspect </Link></button>
+                                    </td>
+                                    <td> <p className='middleBar'> | </p></td>
+                                    <td>
+                                        <button className='buttonDuel'><Link className='styleLink' to='/duel'> Duel </Link></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </nav>
 
                 </div>
             </div>

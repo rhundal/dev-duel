@@ -13,7 +13,7 @@
 
     margin-left: 650px;
     margin-top: 100px;
-    height: 400px;
+    height: 250px;
     width: 500px;
     background-color: rgb(201, 128, 32);
     border: 1 px solid rgb(18, 17, 17);
@@ -92,8 +92,50 @@
 
 }
 
+.styleLink {
+
+    text-decoration: none;
+
+}
+
 .middleBar {
 
     margin-left: 55px;
     font-weight: bolder;
+}
+
+.displayResult {
+
+    margin-left: 700px;
+    margin-top: 5px;
+}
+
+.styleTableResult {
+
+    border: 2px solid rgb(40, 185, 50);
+    border-radius: 2rem;
+}
+
+.tdStyle {
+
+    border: 2px solid rgb(158, 36, 36);
+    border-radius: 2rem;
+
+}
+
+.duelResultsDiv {
+
+    margin-left: 460px;
+    margin-top: 55px;
+}
+
+.spacingTd {
+
+    padding-right: 50px;
+
+}
+
+.winnerStatus {
+    text-align: center;
+
 }
