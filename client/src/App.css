@@ -1,0 +1,99 @@
+.Welcome {
+
+    margin-left: 650px;
+    margin-top: -80px;
+    height: 400px;
+    width: 500px;
+    background-color: rgb(201, 128, 32);
+    border: 1 px solid rgb(18, 17, 17);
+}
+
+.inspectComp,
+.duelComp {
+
+    margin-left: 650px;
+    margin-top: 100px;
+    height: 400px;
+    width: 500px;
+    background-color: rgb(201, 128, 32);
+    border: 1 px solid rgb(18, 17, 17);
+}
+
+#userName1 {
+
+    margin-top: 10rem;
+    margin-left: -95px;
+}
+
+#userName2 {
+
+    margin-top: 10rem;
+    margin-left: -35px;
+}
+
+#styleBtnInspect {
+
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 40px;
+    margin-left: 60px;
+    background-color: rgb(158, 36, 36);
+    border-radius: 0.5rem;
+}
+
+.styleTable {
+
+    margin-top: 1px;
+    margin-left: 130px;
+    justify-self: center;
+
+
+}
+
+#userName0 {
+
+    margin-left: 30px;
+    margin-top: 10rem;
+}
+
+.welcomeTitle {
+    margin-top: 180px;
+    text-align: center;
+
+}
+
+.adjustMarginTitle {
+    margin-top: 30px;
+    padding-top: 13rem;
+    font-size: x-large;
+    font-weight: 100;
+
+}
+
+.welcomeButtonsDiv {
+
+    margin-top: 20px;
+    align-items: center;
+
+}
+
+.buttonInspect,
+.buttonDuel {
+
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-left: 70px;
+    background-color: rgb(149, 136, 136);
+    border-radius: 0.5rem;
+
+}
+
+.middleBar {
+
+    margin-left: 55px;
+    font-weight: bolder;
+}

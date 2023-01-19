@@ -2,7 +2,7 @@ import { Router } from 'express'
 import axios from 'axios'
 import validate from 'express-validation'
 
-import token from '../../token.js'
+import token from '../../token'
 
 import validation from './validation'
 import userMapper from '../services/userService'
