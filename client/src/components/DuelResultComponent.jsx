@@ -42,7 +42,7 @@ const DuelResultComponent = () => {
                                                     <tbody>
                                                         <tr>
                                                             <td>
-                                                                <label for="username0"> Username</label>
+                                                                <label htmlFor='username0'> Username</label>
 
                                                             </td>
                                                             <td>
@@ -52,7 +52,7 @@ const DuelResultComponent = () => {
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <label for="name"> name</label>
+                                                                <label htmlFor='name'> name</label>
 
                                                             </td>
                                                             <td>
@@ -62,7 +62,7 @@ const DuelResultComponent = () => {
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <label for="location"> location </label>
+                                                                <label htmlFor='location'> location </label>
 
                                                             </td>
                                                             <td>
@@ -72,7 +72,7 @@ const DuelResultComponent = () => {
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <label for="titles"> titles </label>
+                                                                <label htmlFor='titles'> titles </label>
 
                                                             </td>
                                                             <td>
@@ -82,7 +82,7 @@ const DuelResultComponent = () => {
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <label for="favLanguage"> fav language </label>
+                                                                <label htmlFor='favLanguage'> fav language </label>
 
                                                             </td>
                                                             <td>
@@ -92,7 +92,7 @@ const DuelResultComponent = () => {
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <label for="totalStars"> total stars </label>
+                                                                <label htmlFor='totalStars'> total stars </label>
 
                                                             </td>
                                                             <td>
@@ -102,7 +102,7 @@ const DuelResultComponent = () => {
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <label for="highestStarCount"> hihgest start count </label>
+                                                                <label htmlFor='highestStarCount'> hihgest start count </label>
 
                                                             </td>
                                                             <td>
@@ -112,7 +112,7 @@ const DuelResultComponent = () => {
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <label for="publicRepos"> public repos </label>
+                                                                <label htmlFor='publicRepos'> public repos </label>
 
                                                             </td>
                                                             <td>
@@ -122,7 +122,7 @@ const DuelResultComponent = () => {
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <label for="perfectRepos"> perfect repos </label>
+                                                                <label htmlFor='perfectRepos'> perfect repos </label>
 
                                                             </td>
                                                             <td>
@@ -132,7 +132,7 @@ const DuelResultComponent = () => {
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <label for="followers"> followers </label>
+                                                                <label htmlFor='followers'> followers </label>
 
                                                             </td>
                                                             <td>
@@ -142,7 +142,7 @@ const DuelResultComponent = () => {
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <label for="following"> following </label>
+                                                                <label htmlFor='following'> following </label>
 
                                                             </td>
                                                             <td>
@@ -175,7 +175,7 @@ const DuelResultComponent = () => {
                                                     <tbody>
                                                         <tr>
                                                             <td>
-                                                                <label for="username1"> Username</label>
+                                                                <label htmlFor='username1'> Username</label>
 
                                                             </td>
                                                             <td>
@@ -185,101 +185,101 @@ const DuelResultComponent = () => {
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <label for="name1"> name</label>
+                                                                <label htmlFor='name'> name</label>
 
                                                             </td>
                                                             <td>
-                                                                <input type="text" id="name1" name="name1" />
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <label for="location1"> location </label>
-
-                                                            </td>
-                                                            <td>
-                                                                <input type="text" id="location1" name="location1" />
+                                                                <input type="text" id="name" name="name" />
 
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <label for="titles1"> titles </label>
+                                                                <label htmlFor='location'> location </label>
 
                                                             </td>
                                                             <td>
-                                                                <input type="text" id="titles1" name="titles1" />
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <label for="favLanguage1"> fav language </label>
-
-                                                            </td>
-                                                            <td>
-                                                                <input type="text" id="favLanguage1" name="favLanguage1" />
+                                                                <input type="text" id="location" name="location" />
 
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <label for="totalStars1"> total stars </label>
+                                                                <label htmlFor='titles'> titles </label>
 
                                                             </td>
                                                             <td>
-                                                                <input type="text" id="totalStars1" name="totalStars1" />
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <label for="highestStarCount1"> hihgest start count </label>
-
-                                                            </td>
-                                                            <td>
-                                                                <input type="text" id="highestStarCount1" name="highestStarCount1" />
+                                                                <input type="text" id="titles" name="titles" />
 
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <label for="publicRepos1"> public repos </label>
+                                                                <label htmlFor='favLanguage'> fav language </label>
 
                                                             </td>
                                                             <td>
-                                                                <input type="text" id="publicRepos1" name="publicRepos1" />
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <label for="perfectRepos1"> perfect repos </label>
-
-                                                            </td>
-                                                            <td>
-                                                                <input type="text" id="perfectRepos1" name="perfectRepos1" />
+                                                                <input type="text" id="favLanguage" name="favLanguage" />
 
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <label for="followers1"> followers </label>
+                                                                <label htmlFor='totalStars'> total stars </label>
 
                                                             </td>
                                                             <td>
-                                                                <input type="text" id="followers1" name="followers1" />
+                                                                <input type="text" id="totalStars" name="totalStars" />
 
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <label for="following1"> following </label>
+                                                                <label htmlFor='highestStarCount'> hihgest start count </label>
 
                                                             </td>
                                                             <td>
-                                                                <input type="text" id="following1" name="following1" />
+                                                                <input type="text" id="highestStarCount" name="highestStarCount" />
+
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <label htmlFor='publicRepos'> public repos </label>
+
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" id="publicRepos" name="publicRepos" />
+
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <label htmlFor='perfectRepos'> perfect repos </label>
+
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" id="perfectRepos" name="perfectRepos" />
+
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <label htmlFor='followers'> followers </label>
+
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" id="followers" name="followers" />
+
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <label htmlFor='following'> following </label>
+
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" id="following" name="following" />
 
                                                             </td>
                                                         </tr>

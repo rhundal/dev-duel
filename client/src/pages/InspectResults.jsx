@@ -1,12 +1,15 @@
 import '../App.css';
 import InspectResultComponent from '../components/InspectResultComponent';
+import { useState } from 'react';
 
+const InspectResults = ({ props }) => {
 
-const InspectResults = () => {
+    const { fetchedUser } = useState({ props });
+
 
     return (
 
-        <InspectResultComponent />
+        <InspectResultComponent props={fetchedUser} />
     );
 }
 

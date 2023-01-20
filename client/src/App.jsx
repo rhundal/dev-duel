@@ -28,8 +28,13 @@ function App() {
         <Route exact path='/duelresult' component={DuelRes} />
         <Route exact path='/inspectresult' component={InspectRes} />
         <Route path='/inspect' component={Inspect} />
+        {/* <Route path='inspect' element={<InspectPage />} */}
         <Route path='/duel' component={Duel} />
         <Route path='/' component={Home} />
+        {/* <Route
+          path='inspectresult/:username'
+          element={<InspectPage />} /> */}
+
       </Switch>
     </Router>
   );

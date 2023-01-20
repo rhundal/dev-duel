@@ -20,7 +20,7 @@ const Welcome = () => {
                                     <td>
                                         <button className='buttonInspect'> <Link className='styleLink' to='/inspect'> Inspect </Link></button>
                                     </td>
-                                    <td> <p className='middleBar'> | </p></td>
+                                    <td> <h1 className='middleBar'> | </h1> </td>
                                     <td>
                                         <button className='buttonDuel'><Link className='styleLink' to='/duel'> Duel </Link></button>
                                     </td>
