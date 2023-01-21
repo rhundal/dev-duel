@@ -4,16 +4,14 @@ import { useState } from 'react';
 import { inspectUser } from '../services/userService';
 import InspectResultComponent from './InspectResultComponent';
 
+
 const InspectComponent = ({ props }) => {
 
     //  let [userName, setUserName] = useState(props.username); // setting value passed in
-
     // const [user, setUser] = useState(props.children);
 
-    //  const [userName, setUserName] = useState(props[0]);
-
     const [user, setUser] = useState({ props });
-    //  let enteredUser = document.getElementById("userName0");
+
     const [searched, setSearched] = useState(false);
 
     const [userName, setUserName] = useState(props.username);
@@ -22,9 +20,9 @@ const InspectComponent = ({ props }) => {
     const handleLookupUserName = async () => {
         setSearched(false);
         let foundUser = await inspectUser(userName);           // look up passed in user
+
         setUser(foundUser);
         setSearched(true);
-
 
     };
 
@@ -39,7 +37,7 @@ const InspectComponent = ({ props }) => {
                             <td>
                                 <input type="text" id="userName0" name="username0"
                                     onChange={(e) => setUserName(e.target.value)}
-                                    value={userName} />
+                                />
                             </td>
                         </tr>
                         <tr>

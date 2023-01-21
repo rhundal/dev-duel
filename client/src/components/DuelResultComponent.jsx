@@ -1,177 +1,69 @@
 import '../../src/App.css';
 import DuelComponent from './DuelComponent';
+import { useState } from 'react';
 
-const DuelResultComponent = () => {
+const DuelResultComponent = ({ usersProps } = []) => {
+
+    // const [user1, setUser1] = useState(usersProps[0]);
+    // const [user2, setUser2] = useState(usersProps[1]);
+
+
+    const user1 = useState(usersProps);
+    const user2 = useState(usersProps);
+
+    //const { user1, user2 } = usersProps;
+
+
+
+    let imgUrl1 = user1['avatar_url'];
+    let imgUrl2 = user2['avatar_url'];
+
+    let setMsg = '';
 
     return (
         <>
-            <DuelComponent />
+            <h3> Display Error Status for user1: {user1.message} </h3>
+            <h3> Display Error Status for user2: {user2.message} </h3>
 
             <div className='duelResultsDiv'>
-
                 <table>
-                    <th>
+                    <tbody>
                         <tr>
                             <td className='spacingTd'>
-                                <label for="winnerStatus"> Winner Status </label>
+                                <label htmlFor="winnerStatus"> Winner Status </label>
 
                             </td>
                             <td className='spacingTd'>
-                                <label for="winnerStatus"> Winner Status </label>
+                                <label htmlFor="winnerStatus"> Winner Status </label>
 
                             </td>
                         </tr>
-                    </th>
+                    </tbody>
+                </table>
+            </div>
+            <div className='duelResultsDiv'>
+                <table>
                     <tbody>
                         <tr>
                             <td>
-                                <table>
+                                <table className='styleTableResult'>
                                     <tbody>
                                         <tr>
                                             <td className='tdStyle'>
                                                 <div>
 
-                                                    <p> image </p>
+                                                    <p>
+                                                        <img src={imgUrl1} alt='userImage' style={{ width: "250px", height: "200px" }} />
+                                                    </p>
 
-                                                    <p> git bio</p>
+                                                    <p>
+                                                        <label htmlFor='bio'> {user1.bio} </label>
+
+                                                    </p>
                                                 </div>
                                             </td>
                                             <td>
-
-                                                <table className='styleTableResult'>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>
-                                                                <label htmlFor='username0'> Username</label>
-
-                                                            </td>
-                                                            <td>
-                                                                <input type="text" id="username0" name="username0" />
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <label htmlFor='name'> name</label>
-
-                                                            </td>
-                                                            <td>
-                                                                <input type="text" id="name" name="name" />
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <label htmlFor='location'> location </label>
-
-                                                            </td>
-                                                            <td>
-                                                                <input type="text" id="location" name="location" />
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <label htmlFor='titles'> titles </label>
-
-                                                            </td>
-                                                            <td>
-                                                                <input type="text" id="titles" name="titles" />
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <label htmlFor='favLanguage'> fav language </label>
-
-                                                            </td>
-                                                            <td>
-                                                                <input type="text" id="favLanguage" name="favLanguage" />
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <label htmlFor='totalStars'> total stars </label>
-
-                                                            </td>
-                                                            <td>
-                                                                <input type="text" id="totalStars" name="totalStars" />
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <label htmlFor='highestStarCount'> hihgest start count </label>
-
-                                                            </td>
-                                                            <td>
-                                                                <input type="text" id="highestStarCount" name="highestStarCount" />
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <label htmlFor='publicRepos'> public repos </label>
-
-                                                            </td>
-                                                            <td>
-                                                                <input type="text" id="publicRepos" name="publicRepos" />
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <label htmlFor='perfectRepos'> perfect repos </label>
-
-                                                            </td>
-                                                            <td>
-                                                                <input type="text" id="perfectRepos" name="perfectRepos" />
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <label htmlFor='followers'> followers </label>
-
-                                                            </td>
-                                                            <td>
-                                                                <input type="text" id="followers" name="followers" />
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <label htmlFor='following'> following </label>
-
-                                                            </td>
-                                                            <td>
-                                                                <input type="text" id="following" name="following" />
-
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                            <td>
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            <td className='tdStyle'>
-                                                <div>
-
-                                                    <p> image </p>
-
-                                                    <p> git bio</p>
-                                                </div>
-                                            </td>
-                                            <td>
-
-                                                <table className='styleTableResult'>
+                                                <table>
                                                     <tbody>
                                                         <tr>
                                                             <td>
@@ -179,7 +71,7 @@ const DuelResultComponent = () => {
 
                                                             </td>
                                                             <td>
-                                                                <input type="text" id="username1" name="username1" />
+                                                                <label htmlFor='username1'> {user1.username} </label>
 
                                                             </td>
                                                         </tr>
@@ -189,7 +81,8 @@ const DuelResultComponent = () => {
 
                                                             </td>
                                                             <td>
-                                                                <input type="text" id="name" name="name" />
+                                                                <label htmlFor='name'> {user1.name} </label>
+
 
                                                             </td>
                                                         </tr>
@@ -199,7 +92,7 @@ const DuelResultComponent = () => {
 
                                                             </td>
                                                             <td>
-                                                                <input type="text" id="location" name="location" />
+                                                                <label htmlFor='location'> {user1.location} </label>
 
                                                             </td>
                                                         </tr>
@@ -209,7 +102,7 @@ const DuelResultComponent = () => {
 
                                                             </td>
                                                             <td>
-                                                                <input type="text" id="titles" name="titles" />
+                                                                <label htmlFor='titles'> {user1.titles} </label>
 
                                                             </td>
                                                         </tr>
@@ -219,7 +112,7 @@ const DuelResultComponent = () => {
 
                                                             </td>
                                                             <td>
-                                                                <input type="text" id="favLanguage" name="favLanguage" />
+                                                                <label htmlFor='favLanguage'> {user1['favorite-language']} </label>
 
                                                             </td>
                                                         </tr>
@@ -229,7 +122,7 @@ const DuelResultComponent = () => {
 
                                                             </td>
                                                             <td>
-                                                                <input type="text" id="totalStars" name="totalStars" />
+                                                                <label htmlFor='totalStars'> {user1['total-stars']} </label>
 
                                                             </td>
                                                         </tr>
@@ -239,7 +132,7 @@ const DuelResultComponent = () => {
 
                                                             </td>
                                                             <td>
-                                                                <input type="text" id="highestStarCount" name="highestStarCount" />
+                                                                <label htmlFor='highestStarCount'> {user1['highest-starred']} </label>
 
                                                             </td>
                                                         </tr>
@@ -249,7 +142,7 @@ const DuelResultComponent = () => {
 
                                                             </td>
                                                             <td>
-                                                                <input type="text" id="publicRepos" name="publicRepos" />
+                                                                <label htmlFor='publicRepos'> {user1['public-repos']} </label>
 
                                                             </td>
                                                         </tr>
@@ -259,7 +152,7 @@ const DuelResultComponent = () => {
 
                                                             </td>
                                                             <td>
-                                                                <input type="text" id="perfectRepos" name="perfectRepos" />
+                                                                <label htmlFor='perfectRepos'> {user1['perfect-repos']} </label>
 
                                                             </td>
                                                         </tr>
@@ -269,7 +162,7 @@ const DuelResultComponent = () => {
 
                                                             </td>
                                                             <td>
-                                                                <input type="text" id="followers" name="followers" />
+                                                                <label htmlFor='followers'> {user1.followers} </label>
 
                                                             </td>
                                                         </tr>
@@ -279,12 +172,150 @@ const DuelResultComponent = () => {
 
                                                             </td>
                                                             <td>
-                                                                <input type="text" id="following" name="following" />
+                                                                <label htmlFor='following'> {user1.following} </label>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td>
+                                <table className='styleTableResult'>
+                                    <tbody>
+                                        <tr>
+                                            <td className='tdStyle'>
+                                                <div>
+
+                                                    <p>
+                                                        <img src={imgUrl2} alt='userImage' style={{ width: "250px", height: "200px" }} />
+                                                    </p>
+
+                                                    <p>
+                                                        <label htmlFor='bio'> {user2.bio} </label>
+
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <label htmlFor='username2'> Username</label>
+
+                                                            </td>
+                                                            <td>
+                                                                <label htmlFor='username2'> {user2.username} </label>
+
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <label htmlFor='name'> name</label>
+
+                                                            </td>
+                                                            <td>
+                                                                <label htmlFor='name'> {user2.name} </label>
+
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <label htmlFor='location'> location </label>
+
+                                                            </td>
+                                                            <td>
+                                                                <label htmlFor='location'> {user2.location} </label>
+
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <label htmlFor='titles'> titles </label>
+
+                                                            </td>
+                                                            <td>
+                                                                <label htmlFor='titles'> {user2.titles} </label>
+
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <label htmlFor='favLanguage'> fav language </label>
+
+                                                            </td>
+                                                            <td>
+                                                                <label htmlFor='favLanguage'> {user2['favorite-language']} </label>
+
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <label htmlFor='totalStars'> total stars </label>
+
+                                                            </td>
+                                                            <td>
+                                                                <label htmlFor='totalStars'> {user2['total-stars']} </label>
+
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <label htmlFor='highestStarCount'> hihgest start count </label>
+
+                                                            </td>
+                                                            <td>
+                                                                <label htmlFor='highestStarCount'> {user2['highest-starred']} </label>
+
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <label htmlFor='publicRepos'> public repos </label>
+
+                                                            </td>
+                                                            <td>
+                                                                <label htmlFor='publicRepos'> {user2['public-repos']} </label>
+
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <label htmlFor='perfectRepos'> perfect repos </label>
+
+                                                            </td>
+                                                            <td>
+                                                                <label htmlFor='perfectRepos'> {user2['perfect-repos']} </label>
+
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <label htmlFor='followers'> followers </label>
+
+                                                            </td>
+                                                            <td>
+                                                                <label htmlFor='followers'> {user2.followers} </label>
+
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <label htmlFor='following'> following </label>
+
+                                                            </td>
+                                                            <td>
+                                                                <label htmlFor='following'> {user2.following} </label>
 
                                                             </td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
+
                                             </td>
                                         </tr>
                                     </tbody>
@@ -294,6 +325,7 @@ const DuelResultComponent = () => {
 
                     </tbody>
                 </table>
+
 
             </div>
 

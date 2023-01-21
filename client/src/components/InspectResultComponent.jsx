@@ -2,6 +2,7 @@ import '../../src/App.css';
 import InspectComponent from './InspectComponent';
 import { useState } from 'react';
 
+
 const InspectResultComponent = ({ userProps }) => {
 
     const [user, setUser] = useState(userProps);
@@ -25,12 +26,14 @@ const InspectResultComponent = ({ userProps }) => {
 
 
 
-    //const [dUser, setUser] = useState({ userProps });
+    let imgUrl = user['avatar_url'];
 
+
+    let setMsg = '';
 
     return (
         <>
-
+            <h3> Display Error Status: {user.message} </h3>
 
             <div className='displayResult'>
 
@@ -40,9 +43,14 @@ const InspectResultComponent = ({ userProps }) => {
                             <td className='tdStyle'>
                                 <div>
 
-                                    <p> image </p>
+                                    <p>
+                                        <img src={imgUrl} alt='userImage' style={{ width: "250px", height: "200px" }} />
+                                    </p>
 
-                                    <p> git bio</p>
+                                    <p>
+                                        <label htmlFor='bio'> {user.bio} </label>
+
+                                    </p>
                                 </div>
                             </td>
                             <td>
@@ -54,7 +62,7 @@ const InspectResultComponent = ({ userProps }) => {
 
                                             </td>
                                             <td>
-                                                <input type="text" id="username0" name="username0" value={user.username} />
+                                                <label htmlFor='username0'> {user.username} </label>
 
                                             </td>
                                         </tr>
@@ -64,7 +72,7 @@ const InspectResultComponent = ({ userProps }) => {
 
                                             </td>
                                             <td>
-                                                <input type="text" id="name" name="name" value={user.name} />
+                                                <label htmlFor='name'> {user.name} </label>
 
                                             </td>
                                         </tr>
@@ -74,7 +82,7 @@ const InspectResultComponent = ({ userProps }) => {
 
                                             </td>
                                             <td>
-                                                <input type="text" id="location" name="location" value={user.location} />
+                                                <label htmlFor='location'> {user.location} </label>
 
                                             </td>
                                         </tr>
@@ -84,7 +92,7 @@ const InspectResultComponent = ({ userProps }) => {
 
                                             </td>
                                             <td>
-                                                <input type="text" id="titles" name="titles" value={user.titles} />
+                                                <label htmlFor='titles'> {user.titles} </label>
 
                                             </td>
                                         </tr>
@@ -94,7 +102,7 @@ const InspectResultComponent = ({ userProps }) => {
 
                                             </td>
                                             <td>
-                                                <input type="text" id="favLanguage" name="favLanguage" value={("user.favorite-language")} />
+                                                <label htmlFor='favLanguage'> {user['favorite-language']} </label>
 
                                             </td>
                                         </tr>
@@ -104,7 +112,7 @@ const InspectResultComponent = ({ userProps }) => {
 
                                             </td>
                                             <td>
-                                                <input type="text" id="totalStars" name="totalStars" value={("user.total-stars")} />
+                                                <label htmlFor='totalStars'> {user['total-stars']} </label>
 
                                             </td>
                                         </tr>
@@ -114,7 +122,7 @@ const InspectResultComponent = ({ userProps }) => {
 
                                             </td>
                                             <td>
-                                                {/* <input type="text" id="highestStarCount" name="highestStarCount" value={user.highestStarcount} /> */}
+                                                <label htmlFor='highestStarCount'> {user['highest-starred']} </label>
 
                                             </td>
                                         </tr>
@@ -124,7 +132,7 @@ const InspectResultComponent = ({ userProps }) => {
 
                                             </td>
                                             <td>
-                                                {/* <input type="text" id="publicRepos" name="publicRepos" value={publicRepos} /> */}
+                                                <label htmlFor='publicRepos'> {user['public-repos']} </label>
 
                                             </td>
                                         </tr>
@@ -134,7 +142,7 @@ const InspectResultComponent = ({ userProps }) => {
 
                                             </td>
                                             <td>
-                                                {/* <input type="text" id="perfectRepos" name="perfectRepos" value={perfectRepos} /> */}
+                                                <label htmlFor='perfectRepos'> {user['perfect-repos']} </label>
 
                                             </td>
                                         </tr>
@@ -144,7 +152,7 @@ const InspectResultComponent = ({ userProps }) => {
 
                                             </td>
                                             <td>
-                                                <input type="text" id="followers" name="followers" value={user.followers} />
+                                                <label htmlFor='followers'> {user.followers} </label>
 
                                             </td>
                                         </tr>
@@ -154,7 +162,7 @@ const InspectResultComponent = ({ userProps }) => {
 
                                             </td>
                                             <td>
-                                                <input type="text" id="following" name="following" value={user.following} />
+                                                <label htmlFor='following'> {user.following} </label>
 
                                             </td>
                                         </tr>
@@ -175,8 +183,3 @@ const InspectResultComponent = ({ userProps }) => {
 
 export default InspectResultComponent;
 
-{/* 
-
- 
-
-*/}

@@ -1,6 +1,6 @@
 .Welcome {
 
-    margin-left: 650px;
+    margin-left: 520px;
     margin-top: -80px;
     height: 400px;
     width: 500px;
@@ -11,7 +11,7 @@
 .inspectComp,
 .duelComp {
 
-    margin-left: 650px;
+    margin-left: 520px;
     margin-top: 100px;
     height: 250px;
     width: 500px;
@@ -22,13 +22,13 @@
 #userName1 {
 
     margin-top: 10rem;
-    margin-left: -95px;
+    margin-left: -65px;
 }
 
 #userName2 {
 
     margin-top: 10rem;
-    margin-left: -35px;
+    margin-left: -25px;
 }
 
 #styleBtnInspect {
@@ -54,7 +54,7 @@
 
 #userName0 {
 
-    margin-left: 30px;
+    margin-left: 48px;
     margin-top: 10rem;
 }
 
@@ -106,8 +106,9 @@
 
 .displayResult {
 
-    margin-left: 700px;
+    margin-left: 400px;
     margin-top: 5px;
+    padding-left: 6rem;
 }
 
 .styleTableResult {
@@ -120,13 +121,16 @@
 
     border: 2px solid rgb(158, 36, 36);
     border-radius: 2rem;
+    padding: 4rem;
 
 }
 
 .duelResultsDiv {
 
-    margin-left: 460px;
+    margin-left: 400px;
     margin-top: 55px;
+    padding-left: 6rem;
+    padding-right: 6rem;
 }
 
 .spacingTd {
@@ -138,4 +142,10 @@
 .winnerStatus {
     text-align: center;
 
+}
+
+h3 {
+    margin-top: 20px;
+    margin-left: 570px;
+    margin-bottom: 50px;
 }
