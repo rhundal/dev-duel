@@ -10,7 +10,13 @@ const Inspect = () => {
 
     return (
 
-        <InspectComponent props={user} />
+        <>
+
+            {/* <h2> Printing - {user.length} </h2> */}
+
+            <InspectComponent props={user} />
+
+        </>
     );
 }
 

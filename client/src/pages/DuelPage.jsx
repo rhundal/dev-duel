@@ -6,16 +6,14 @@ import { useState } from 'react';
 
 const Duel = () => {
 
-    const [users, setUsers] = useState(duelUsers());        // set default user
-
-    const { user1, user2 } = users;
+    const [fetchedUsers, setUser] = useState(duelUsers());        // set default user
 
     return (
 
-        <DuelComponent>
-            {user1} {user2}
-        </DuelComponent>
+        <>
+            <DuelComponent props={fetchedUsers} />
 
+        </>
     );
 }
 

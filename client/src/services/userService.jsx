@@ -12,11 +12,12 @@ export const inspectUser = async (username = "andrew") => {
 };
 
 export const duelUsers = async (user1 = "fabpot", user2 = "andrew") => {
-    // await response of fetch call
-    let response = await fetch(duelUsersUrl + `username=${user1}&username=${user2}`);
-    // only proceed once promise is resolved
-    let data = await response.json();
-    console.log(data);
-    // only proceed once second promise is resolved
-    return data;
-  };
+  // await response of fetch call
+  let response = await fetch(duelUsersUrl + `username=${user1}&username=${user2}`);
+  // only proceed once promise is resolved
+  let data = await response.json();
+  console.log(data);
+  // only proceed once second promise is resolved
+  return data;
+};
+

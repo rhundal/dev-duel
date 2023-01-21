@@ -1,18 +1,17 @@
 import '../../src/App.css';
 import DuelComponent from './DuelComponent';
-import { useState } from 'react';
+import { Children, useState } from 'react';
 
-const DuelResultComponent = ({ usersProps } = []) => {
+const DuelResultComponent = ({ userProp }) => {
 
-    // const [user1, setUser1] = useState(usersProps[0]);
-    // const [user2, setUser2] = useState(usersProps[1]);
+    const myArray = [...userProp];
 
+    let user1 = myArray[0];
+    let user2 = myArray[1];
 
-    const user1 = useState(usersProps);
-    const user2 = useState(usersProps);
+    console.log("pppppppp " + myArray.length);
 
-    //const { user1, user2 } = usersProps;
-
+    console.log("vvvvvvvvvvvvvvvvvalue - " + myArray[0].username);
 
 
     let imgUrl1 = user1['avatar_url'];
@@ -24,6 +23,8 @@ const DuelResultComponent = ({ usersProps } = []) => {
         <>
             <h3> Display Error Status for user1: {user1.message} </h3>
             <h3> Display Error Status for user2: {user2.message} </h3>
+
+
 
             <div className='duelResultsDiv'>
                 <table>

@@ -2,42 +2,40 @@ import '../../src/App.css';
 import { Link } from 'react-router-dom';
 import DuelResultComponent from './DuelResultComponent';
 import { inspectUser, duelUsers } from '../services/userService';
-import { useState } from 'react';
+import { Children, useEffect, useState } from 'react';
 
 
 const DuelComponent = ({ props }) => {
 
-
     const [users, setUsers] = useState({ props });
 
-    const [searchedUsers, setSearchedUsers] = useState(false);
+    const [searched, setSearched] = useState(false);
 
+    const [userName1, setUserName1] = useState(props.user1);
+    const [userName2, setUserName2] = useState(props.user2);
 
-    const user1 = useState(props);
-    const user2 = useState(props);
+    let userArray = [];
 
-    const [userName1, setUserName1] = useState(user1.username);
-    const [userName2, setUserName2] = useState(user2.username);
-
-    ///////////////////////////////////////////////////////////
-
-
+    let foundUsers;
 
     const handleLookupUserNames = async () => {
 
-        setSearchedUsers(false);
 
-        let foundUsers = await duelUsers(userName1, userName2);
+        setSearched(false);
 
-        const { foundUser1, foundUser2 } = foundUsers;
+        foundUsers = await duelUsers(userName1, userName2);
+
 
         setUsers(foundUsers);
-        setSearchedUsers(true);
 
+        setSearched(true);
     };
+
+
 
     return (
         <>
+
             <div className='duelComp'>
 
                 <table className='styleTable'>
@@ -45,34 +43,37 @@ const DuelComponent = ({ props }) => {
 
                         <tr>
                             <td>
-                                <input type="text" id="userName1" name="userName1"
+                                <input type="text" id="userN1" name="userN1"
                                     onChange={(e) => setUserName1(e.target.value)}
                                 />
 
                             </td>
                             <td>
 
-                                <input type="text" id="userName2" name="userName2"
+                                <input type="text" id="userN2" name="userN2"
                                     onChange={(e) => setUserName2(e.target.value)}
                                 />
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                {/* <button id='styleBtnInspect'><Link className='styleLink' to='/duelresult'> Duel </Link></button> */}
 
                                 <button onClick={() => handleLookupUserNames()} id='styleBtnInspect'> Duel </button>
                             </td>
                         </tr>
                     </tbody>
                 </table>
-                <h2> {userName1} {userName2}</h2>
+                <h2> {userName1} {userName2} </h2>
             </div>
 
+
             <br />
             <br />
 
-            {searchedUsers ? <DuelResultComponent user={users} /> : null}
+            {searched ? <DuelResultComponent userProp={users} /> : null
+            }
+
+
         </>
     );
 
