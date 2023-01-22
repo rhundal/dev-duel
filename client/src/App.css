@@ -113,13 +113,13 @@
 
 .styleTableResult {
 
-    border: 2px solid rgb(40, 185, 50);
+    border: 2px solid rgb(60, 61, 60);
     border-radius: 2rem;
 }
 
 .tdStyle {
 
-    border: 2px solid rgb(158, 36, 36);
+    border: 2px solid rgb(11, 11, 11);
     border-radius: 2rem;
     padding: 4rem;
 
@@ -127,15 +127,27 @@
 
 .duelResultsDiv {
 
-    margin-left: 400px;
+    margin-left: 50px;
     margin-top: 55px;
     padding-left: 6rem;
     padding-right: 6rem;
+    margin-bottom: 80px;
+}
+
+.duelResultsWinner {
+
+    margin-left: 500px;
+    margin-top: 55px;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    margin-bottom: 80px;
 }
 
 .spacingTd {
 
     padding-right: 50px;
+    font-weight: bold;
+    padding-right: 90px;
 
 }
 

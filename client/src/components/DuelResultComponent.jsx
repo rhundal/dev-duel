@@ -9,33 +9,86 @@ const DuelResultComponent = ({ userProp }) => {
     let user1 = myArray[0];
     let user2 = myArray[1];
 
-    console.log("pppppppp " + myArray.length);
-
-    console.log("vvvvvvvvvvvvvvvvvalue - " + myArray[0].username);
-
-
     let imgUrl1 = user1['avatar_url'];
     let imgUrl2 = user2['avatar_url'];
 
     let setMsg = '';
+
+    let winnerStatus = '';
+    let winnerMsgWon = '';
+    let winnerMsgLost = '';
+    let winnerMsgTie = '';
+    let winnerMsgOther = '';
+    let msg = '';
+    let bothWon = false;
+    let flagArray = [];
+    let lostMsg = "";
+
+    for (let i = 0; i < myArray.length; i++) {
+
+        if (myArray[i]['favorite-language'] === 'JavaScript') {
+
+            console.log("we have a winner ");
+
+            if (myArray[i] === 'user1') {
+                //  winnerStatus = 'user1';
+                //    bothWon = false;
+                flagArray.push(myArray[i]);
+
+            }
+            if (myArray[i] === 'user2') {
+
+                // winnerStatus = 'user2';
+                // bothWon = false;
+                flagArray.push(myArray[i]);
+            }
+
+        }
+
+    }
+
+    if (flagArray.length > 0) {
+        bothWon = true;
+        console.log("both won");
+    }
+
+    if (flagArray.includes("user1")) {
+        winnerStatus = "user1";
+    }
+    else if (flagArray.includes("user2")) {
+        winnerStatus = "user2";
+    }
+    else if (bothWon) {
+        winnerStatus = "";
+        msg = "both of you won !! we heart JavaScript!";
+        lostMsg = "";
+    }
+    else {
+        winnerStatus = "";
+        msg = "neither of you like JavaScript";
+        lostMsg = "";
+    }
+
 
     return (
         <>
             <h3> Display Error Status for user1: {user1.message} </h3>
             <h3> Display Error Status for user2: {user2.message} </h3>
 
+            <h4> checking winner status: {winnerStatus} </h4>
 
-
-            <div className='duelResultsDiv'>
+            <div className='duelResultsWinner'>
                 <table>
                     <tbody>
                         <tr>
                             <td className='spacingTd'>
-                                <label htmlFor="winnerStatus"> Winner Status </label>
+                                <label htmlFor="winnerStatus1"> Winner Status:   </label>
+                                <p> {`${winnerStatus}` === `user1` ? 'you won!' : 'you lost'} </p>
 
                             </td>
                             <td className='spacingTd'>
-                                <label htmlFor="winnerStatus"> Winner Status </label>
+                                <label htmlFor="winnerStatus3"> Winner Status: </label>
+                                <p>  {`${winnerStatus}` === `user1` ? 'you lost' : 'you won!'} </p>
 
                             </td>
                         </tr>

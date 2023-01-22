@@ -20,4 +20,3 @@ export const duelUsers = async (user1 = "fabpot", user2 = "andrew") => {
   // only proceed once second promise is resolved
   return data;
 };
-

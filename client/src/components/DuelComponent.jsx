@@ -14,8 +14,6 @@ const DuelComponent = ({ props }) => {
     const [userName1, setUserName1] = useState(props.user1);
     const [userName2, setUserName2] = useState(props.user2);
 
-    let userArray = [];
-
     let foundUsers;
 
     const handleLookupUserNames = async () => {
